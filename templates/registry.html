@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+</head>
+<style>
+h1 {text-align:center;}
+
+.submit {
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<body>
+<h1 style="font-family:Brush Script MT, Brush Script Std, cursive;">Welcome to the registration page.</h1>
+
+<br>
+<div style="text-align:center">
+<form action="/register" method="post">
+    <label for="user_name">User Name:</label>
+    <input type="text" name="create_user_name">
+    <label for="password">Password:</label>
+    <input type="text" name="create_password">
+
+    <br>
+<button type="submit" onclick="alert('Success!')">Submit</button>
+</form>
+
+    </div>
+</body>
+</html>

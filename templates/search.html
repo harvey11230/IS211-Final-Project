@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Search</title>
+</head>
+<style>
+h1 {text-align:center;}
+.submit {
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.delete {
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<body>
+<!--<b>Welcome, {{username}}!</b>-->
+<a href="/"><input type="button" value="Sign Out" onclick="alert('Redirect to the home page!')"></a>
+<br>
+<h1 style="font-family:Brush Script MT, Brush Script Std, cursive;">Book Search</h1>
+<br>
+
+<div style="text-align:center">
+    <form action="/add" method="post">
+    <label for="fISBN">ISBN:</label>
+    <input type="text" name="ISBN" size="50">
+
+<button type="submit" class="submit">Add</button>
+    <br>
+    </form>
+
+    <form action="/delete" method="post">
+    <input type="text" name="Delete_ISBN" size="50" placeholder="Enter ISBN">
+    <button type="submit" class="delete">Delete</button>
+    <br>
+    <br>
+        <h1> Records </h1>
+        <br>
+</div>
+</form>
+
+<table class="center">
+
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>Authors</th>
+    <th>PageCount</th>
+    <th>AverageRating</th>
+
+<tr>
+    <tr>
+    {% for i in books %}
+    </tr>
+    <td style="text-align:center">{{i[0]}}</td>
+    <td style="text-align:center">{{i[1]}}</td>
+    <td style="text-align:center">{{i[2]}}</td>
+    <td style="text-align:center">{{i[3]}}</td>
+    <td style="text-align:center">{{i[4]}}</td>
+    {%endfor%}
+</tr>
+
+</table>
+
+
+
+</body>
+</html>

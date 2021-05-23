@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Catelogue</title>
+</head>
+<style>
+h1 {text-align:center;}
+
+.sign_in {
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.register {
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<body>
+<h1 style="font-family:Brush Script MT, Brush Script Std, cursive;">Book Search</h1>
+
+<br>
+<br>
+<div style="text-align:center">
+
+    <form action="/sign_in" method="post">
+    <label for="fuser_name">User Name:</label>
+    <input type="text" name="fuser_name">
+        <label for="fpassword">Password:</label>
+        <input type="text" name="fpassword">
+
+        <br>
+            <button type="submit" class="sign_in"> Sign In </button>
+    <a href="/register_form">
+    <button type="button" name="register" class = "register" onclick="alert('Redirect to the registration page!')"> Register </button>
+    </a>
+    </form>
+<br>
+
+
+</div>
+</body>
+</html>
